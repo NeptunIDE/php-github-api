@@ -87,6 +87,14 @@ class CurrentUser extends AbstractApi
     }
 
     /**
+     * @return array
+     */
+    public function orgs()
+    {
+        return $this->get('user/orgs');
+    }
+
+    /**
      * @return Watchers
      */
     public function watchers()

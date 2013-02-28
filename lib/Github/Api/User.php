@@ -85,6 +85,17 @@ class User extends AbstractApi
     }
 
     /**
+     * Get the organizations of a user
+     *
+     * @param  string  $username         the username
+     * @return array                     list of the user organizations
+     */
+    public function orgs($username)
+    {
+        return $this->get('users/'.urlencode($username).'/orgs');
+    }
+
+    /**
      * Get the public gists for a user
      * @link http://developer.github.com/v3/gists/
      *
